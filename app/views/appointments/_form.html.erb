@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :physician_id %>
-    <%= form.collection_select(:physician_id, Physician.all, :id, :name) %>
+    <%= form.collection_select(:physician_id, Physician.all, :id, :physician_name) %>
   </div>
 
   <div class="field">
     <%= form.label :patient_id %>
-    <%= form.collection_select(:patient_id, Patient.all, :id, :name) %>
+    <%= form.collection_select(:patient_id, Patient.all, :id, :patient_name) %>
   </div>
 
   <div class="actions">
