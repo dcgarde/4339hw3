@@ -21,14 +21,14 @@
     <%= form.text_field :specialty %>
   </div>
 
+  <h3>Office Locations</h3>
   <div class="field">
-    <%= form.label :appointment_id %>
-    <%= form.text_field :appointment_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :patient_id %>
-    <%= form.text_field :patient_id %>
+    <%= form.fields_for :offices do |office| %>
+      <%= render 'office_fields', :f => office %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'Add an Office', form, :offices %>
+    </div>
   </div>
 
   <div class="actions">
