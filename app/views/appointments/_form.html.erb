@@ -13,11 +13,7 @@
 
  <div class="field">
     <%= form.label :visit %>
-    <%= form.select(:year, (Date.today.year)..(Date.today.year+5)) %>
-    <%= form.select(:month, Date::MONTHNAMES[1..12]) %>
-    <%= form.select(:day, ('1'..'31')) %>
-    <%= form.select(:hour, ('00'..'23')) %>
-    <%= form.select(:minutes,('00'..'59'))%>
+    <%= form.text_field :visit %>
     
   </div>
 

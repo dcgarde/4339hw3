@@ -7,12 +7,12 @@
 
 <p>
   <strong>Physician:</strong>
-  <%= @appointment.physician_id %>
+  <%= @appointment.physician.physician_name %>
 </p>
 
 <p>
   <strong>Patient:</strong>
-  <%= @appointment.patient_id %>
+  <%= @appointment.patient.patient_name %>
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |

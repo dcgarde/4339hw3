@@ -31,14 +31,14 @@
 
 <p>
   <strong>Current Appointments:</strong>
-  <div class="table">
+  <div id="table">
     <table>
       <th>Patient Name</th>
       <th>Date of Appointment</th>
 
-      <% @physician.patients.each do |patient|%>
+      <% @physician.appointments.each do |patient|%>
         <tr>
-          <td><%= patient.patient_name %></td>
+          <td><%= patient.patient.patient_name %></td>
         </tr>
       <% end %>
 
