@@ -3,11 +3,7 @@
 one:
   physician_name: MyString
   specialty: MyString
-  appointment: one
-  patient: one
 
 two:
   physician_name: MyString
   specialty: MyString
-  appointment: two
-  patient: two

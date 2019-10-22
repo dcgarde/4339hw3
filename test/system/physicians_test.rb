@@ -14,8 +14,6 @@ class PhysiciansTest < ApplicationSystemTestCase
     visit physicians_url
     click_on "New Physician"
 
-    fill_in "Appointment", with: @physician.appointment_id
-    fill_in "Patient", with: @physician.patient_id
     fill_in "Physician name", with: @physician.physician_name
     fill_in "Specialty", with: @physician.specialty
     click_on "Create Physician"
@@ -28,8 +26,6 @@ class PhysiciansTest < ApplicationSystemTestCase
     visit physicians_url
     click_on "Edit", match: :first
 
-    fill_in "Appointment", with: @physician.appointment_id
-    fill_in "Patient", with: @physician.patient_id
     fill_in "Physician name", with: @physician.physician_name
     fill_in "Specialty", with: @physician.specialty
     click_on "Update Physician"

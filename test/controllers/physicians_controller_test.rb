@@ -17,7 +17,7 @@ class PhysiciansControllerTest < ActionDispatch::IntegrationTest
 
   test "should create physician" do
     assert_difference('Physician.count') do
-      post physicians_url, params: { physician: { appointment_id: @physician.appointment_id, patient_id: @physician.patient_id, physician_name: @physician.physician_name, specialty: @physician.specialty } }
+      post physicians_url, params: { physician: { physician_name: @physician.physician_name, specialty: @physician.specialty } }
     end
 
     assert_redirected_to physician_url(Physician.last)
@@ -34,7 +34,7 @@ class PhysiciansControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update physician" do
-    patch physician_url(@physician), params: { physician: { appointment_id: @physician.appointment_id, patient_id: @physician.patient_id, physician_name: @physician.physician_name, specialty: @physician.specialty } }
+    patch physician_url(@physician), params: { physician: { physician_name: @physician.physician_name, specialty: @physician.specialty } }
     assert_redirected_to physician_url(@physician)
   end
 
