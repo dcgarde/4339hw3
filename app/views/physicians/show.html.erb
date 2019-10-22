@@ -10,5 +10,46 @@
   <%= @physician.specialty %>
 </p>
 
+<p>
+  <strong>Office Locations:</strong>
+  <div class="table">
+    <table>
+      <th>Street Address</th>
+      <th>Zip Code</th>
+      <th>Phone</th>
+
+      <% @physician.offices.each do |office|%>
+        <tr>
+          <td><%= office.street_address %></td>
+          <td><%= office.zip_code %></td>
+          <td><%= office.phone %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</p>
+
+<p>
+  <strong>Current Appointments:</strong>
+  <div class="table">
+    <table>
+      <th>Patient Name</th>
+      <th>Date of Appointment</th>
+
+      <% @physician.patients.each do |patient|%>
+        <tr>
+          <td><%= patient.patient_name %></td>
+        </tr>
+      <% end %>
+
+      <%= @physician.appointments.each do |appointment| %>
+        <tr>
+          <td><%= appointment.visit %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</p>
+
 <%= link_to 'Edit', edit_physician_path(@physician) %> |
 <%= link_to 'Back', physicians_path %>
