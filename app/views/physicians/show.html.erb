@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Physician name:</strong>
-  <%= @physician.physician_name %>
+  <h2><%= @physician.physician_name %></h2>
 </p>
 
 <p>
-  <strong>Specialty:</strong>
-  <%= @physician.specialty %>
+  <h3>Specialty:
+  <%= @physician.specialty %></h3>
 </p>
+<hr>
 
 <p>
-  <strong>Office Locations:</strong>
-  <div class="table">
-    <table>
+  <div class="title">
+    <h3>Office Locations</h3>
+  </div>
+  <div class="office">
+    <table style="border: 1px, solid, black; border-collapse: collapse">
       <th>Street Address</th>
       <th>Zip Code</th>
       <th>Phone</th>
@@ -30,21 +32,18 @@
 </p>
 
 <p>
-  <strong>Current Appointments:</strong>
-  <div id="table">
+  <div class="titles">
+    <h3>Current Appointments</h3>
+  </div>
+  <div class="appointment">
     <table>
       <th>Patient Name</th>
       <th>Date of Appointment</th>
 
-      <% @physician.appointments.each do |patient|%>
+      <% @physician.appointments.each do |app|%>
         <tr>
-          <td><%= patient.patient.patient_name %></td>
-        </tr>
-      <% end %>
-
-      <%= @physician.appointments.each do |appointment| %>
-        <tr>
-          <td><%= appointment.visit %></td>
+          <td><%= app.patient.patient_name %></td>
+          <td><%= app.visit %>
         </tr>
       <% end %>
     </table>
