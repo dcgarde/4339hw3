@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+ <div class="field">
     <%= form.label :visit %>
-    <%= form.text_field :visit %>
+    <%= form.select(:year, (Date.today.year-1)..(Date.today.year+5), :selected => Time.current.year) %>
+    <%= form.select(:month, Date::MONTHNAMES[1..12], :selected => Time.current.month) %>
+    <%= form.select(:day, (Date.today.day-20)..(Date.today.day+10), :selected => Time.current.day) %>
+    <%= form.select(:hour, ('00'..'23'), :selected => Time.current.hour) %>
+    <%= form.select(:minutes,('00'..'59'))%>
+    
   </div>
 
   <div class="field">
     <%= form.label :physician_id %>
-    <%= form.text_field :physician_id %>
+    <%= form.collection_select(:physician_id, Physician.all, :id, :name) %>
   </div>
 
   <div class="field">
     <%= form.label :patient_id %>
-    <%= form.text_field :patient_id %>
+    <%= form.collection_select(:patient_id, Patient.all, :id, :name) %>
   </div>
 
   <div class="actions">
