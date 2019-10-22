@@ -32,14 +32,14 @@ th{
 }
 
 h3{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 field{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-table.office2{
+table.office2.tr:nth-child(even){
     border: 1px, solid, black;
     border-collapse: collapse;
 }
