@@ -43,7 +43,7 @@
       <% @physician.appointments.each do |app|%>
         <tr>
           <td><%= app.patient.patient_name %></td>
-          <td><%= app.visit %>
+          <td><%= app.visit_date_time %>
         </tr>
       <% end %>
     </table>

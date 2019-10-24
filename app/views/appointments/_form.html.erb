@@ -12,9 +12,12 @@
   <% end %>
 
  <div class="field">
-    <%= form.label :visit %>
-    <%= form.text_field :visit %>
-    
+    <%= form.label :visit_date_time %>
+    <%= form.datetime_select :visit_date_time, :order => [:year, :month, :day, :hour, :minute],
+          :start_year => Date.current.year, :end_year => Date.current.year + (5),
+          :datetime_separator => " — ", :start_hour => 00,
+          :end_hour => 23, :start_minute => 00, :end_minute => 59, 
+          :selected => Date.today, :selected => Time.current.time %> 
   </div>
 
   <div class="field">
