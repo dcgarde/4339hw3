@@ -39,9 +39,9 @@ field{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-table.office2.tr:nth-child(even){
-    border: 1px, solid, black;
+table.office2{
     border-collapse: collapse;
+    border: 1px, solid, black;
 }
 
 title{
