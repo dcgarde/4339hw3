@@ -1,20 +1,23 @@
 // Place all the styles related to the Physicians controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.office {
-    border-collapse: collapse;
-    background-color: #EEEEEE;
-    margin-bottom: 10px;
- }
- .office, td, th, tr {
-    text-align: left;
-    border: 1px solid #AAAAAA;
-    padding: 3px;
- }
- .office, th {
-    font-weight: bold;
-    background-color: #EEEEEE
- }
- .office, tr:nth-child(even) {
-    background-color: lightblue;
- }
+.physician_table {
+   border-collapse: collapse;
+   background-color: #EEEEEE;
+   margin-bottom: 10px;
+   text-align: left;
+}
+.physician_table td {
+   text-align: left;
+   border: 1px solid #AAAAAA;
+   padding: 3px;
+}
+.physician_table th {
+   font-weight: bold;
+   background-color: #EEEEEE;
+   border: 1px solid #AAAAAA;
+   padding: 3px;
+}
+.physician_table tr:nth-child(even) {
+   background-color: lightblue;
+}
