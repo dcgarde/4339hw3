@@ -5,6 +5,7 @@
    border-collapse: collapse;
    margin-bottom: 10px;
    text-align: left;
+   width: 100%;
 }
 .physician_table td {
    text-align: left;
@@ -18,5 +19,5 @@
    padding: 3px;
 }
 .physician_table tr:nth-child(even) {
-   background-color: lightblue;
+   background-color: lightsteelblue;
 }
